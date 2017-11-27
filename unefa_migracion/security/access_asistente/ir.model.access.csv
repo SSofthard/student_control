@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_unefa_notas_migracion_asistente,unefa.notas_migracion,model_unefa_notas_migracion,unefa_configuracion.group_unefa_asistente,1,0,0,0
+access_unefa_planilla_notas_asistente,unefa.planilla_notas,model_unefa_planilla_notas,unefa_configuracion.group_unefa_asistente,1,0,0,0

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_unefa_notas_migracion_form">
+            <field name="name">unefa.notas_migracion_form</field>
+            <field name="model">unefa.notas_migracion</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Notas">
+                    <sheet>
+                        <header>
+                            <h2 style="color:#7C7BAD"><center>Notas Académicas</center></h2>
+                        </header><br/>
+                        <group col="4">
+                            <field name="estudiante_id"  widget="selection" />
+                            <field name="calificacion"  widget="selection"/>
+                            <field name="asignatura_id"  widget="selection"/>
+                            <field name="pensum_id"  widget="selection"/>
+                            <field name="periodo" />
+                            <field name="profesor_id"  widget="selection"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_unefa_notas_migracion_tree">
+        <field name="name">unefa.notas_migracion.tree</field>
+        <field name="model">unefa.notas_migracion</field>
+        <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Notas">
+                    <field name="estudiante_id" />
+                    <field name="asignatura_id" />
+                    <field name="calificacion"  />
+                    <field name="periodo" />
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_unefa_notas_migracion">
+            <field name="name">Notas</field>
+            <field name="res_model">unefa.notas_migracion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Notas.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem name="Notas" 
+                  id="notas_migracion_id" 
+                  parent="unefa_migracion" 
+                  action="action_unefa_notas_migracion" 
+                  sequence="5" 
+                  groups="base.group_system"
+                  />
+        
+    </data>
+</openerp>
+

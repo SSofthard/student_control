@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="inherit_js_planilla_notas" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/unefa_migracion/static/src/js/export_csv.js"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>

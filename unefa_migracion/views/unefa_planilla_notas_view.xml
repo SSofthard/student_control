@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_unefa_planilla_notas_form">
+            <field name="name">unefa.planilla_notas_form</field>
+            <field name="model">unefa.planilla_notas</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Planilla">
+                    <header>
+                        <a class="oe_button exportar_csv" icon="gtk-print" type="button"
+                        >Exportar</a>
+                    </header>
+                    <sheet>
+                        <header>
+                            <h2 style="color:#7C7BAD"><center>Asignaturas</center></h2>
+                        </header><br/>
+                        <group col="4">
+                            <field name="pensum_id"  on_change="limpiar_campos('asignatura_id')" />
+                            <field name="asignatura_id"  on_change="domain_asignatura(pensum_id)" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_unefa_planilla_notas_tree">
+        <field name="name">unefa.planilla_notas.tree</field>
+        <field name="model">unefa.planilla_notas</field>
+        <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Asignaturas">
+                    <field name="pensum_id" />
+                    <field name="asignatura_id" />
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_unefa_planilla_notas">
+            <field name="name">Asignaturas</field>
+            <field name="res_model">unefa.planilla_notas</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Asignaturas.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem name="Migración" id="unefa_migracion" parent="unefa_configuracion.unefa_menu_principal_gestion" sequence="1" groups="base.group_system"/>
+        <menuitem name="Generar Planilla" id="menu_planilla_id" parent="unefa_migracion" action="action_unefa_planilla_notas" sequence="1" groups="base.group_system"/>
+        
+    </data>
+</openerp>
+

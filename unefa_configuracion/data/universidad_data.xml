@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+	  
+
+    <record id="unefa_nucleo_caracas" model="unefa.nucleo">
+		<field name="nombre">Núcleo Caracas</field>
+		<field name="decano">CNEL.AV. ANTONIO ALCANTARINI MICACCHIONI</field>
+		<field name="unidad_academica">M.Sc. JASVELIN MUJICA</field>
+		<field name="tipo_sede">nucleo</field>
+        <field name="redi_id" ref="geo_redi_ZC"/>
+        <field name="region_id" ref="rgn_dfs_int_ZC"/>
+        <field name="telefono">02129082100</field>
+        <field name="estado_id" ref="geo_est_DTO"/>
+		<field name="municipio_id" ref="geo_mun_MIR_CHA"/>
+		<field name="parroquia_id" ref="geo_par_MIR_CHA_CAC"/>
+		<field name="direccion">Av. La Estancia, con Av. Caracas y Calle Holanda, Frente al Edif. Banaven, Cubo Negro, Chuao, Caracas.</field>
+	</record>
+    
+    
+	</data>
+</openerp>
